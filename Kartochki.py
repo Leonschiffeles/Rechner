@@ -1,5 +1,4 @@
 import Gui as gu
-import Kartochka as ka
 import json
 import random
 
@@ -26,9 +25,9 @@ class Carten:
                     fg="#FFFFFF", font=('times', 50, 'bold')).pack(side='top', pady=15)
 
         gu.tk.Button(gu.frame_Body, text="Показывать значение", width=20, height=1, fg="#66B2FF", bg="#FFFFFF",
-                     font=('times', 18, 'bold'), command=self.display_true).pack(side='left', pady=9)
+                     font=('times', 18, 'bold'), command=self.display_true).pack(side='left',anchor='sw', padx=5, pady=4)
         gu.tk.Button(gu.frame_Body, text="Cкрыть значение", width=20, height=1, fg="#66B2FF", bg="#FFFFFF",
-                     font=('times', 18, 'bold'), command=self.skrut_true).pack(side='right', pady=9)
+                     font=('times', 18, 'bold'), command=self.skrut_true).pack(side='right', anchor='se', padx=5, pady=4)
 
         self.button_u = gu.tk.Button(gu.frame_Button, text="Udalit", width=20, height=2, activebackground="#FFFFFF",
                                      activeforeground="#66B2FF", bg="#66B2FF", fg="#FFFFFF",
@@ -38,7 +37,7 @@ class Carten:
         self.button_d = gu.tk.Button(gu.frame_Button, text="Dalee", width=20, height=2, activebackground="#FFFFFF",
                                      activeforeground="#66B2FF", bg="#66B2FF", fg="#FFFFFF",
                                      font=('times', 15, 'bold'))
-        self.button_d["command"] = self.button_da
+        self.button_d["command"] = self.display_cartu
         self.button_d.grid(row=0, column=1, padx=8, pady=3)
         self.button_do = gu.tk.Button(gu.frame_Button, text="Dobavit", width=20, height=2, activebackground="#FFFFFF",
                                       activeforeground="#66B2FF", bg="#66B2FF", fg="#FFFFFF",
@@ -46,16 +45,14 @@ class Carten:
         self.button_do["command"] = self.button_dob
         self.button_do.grid(row=0, column=2, padx=8, pady=3)
 
-    def button_da(self):
-        self.display_cartu()
-
     def display_true(self):
-        self.tru = gu.tk.Label(gu.frame_Body, textvariable=self.znach, width=18, height=1, bg="#66B2FF",
-                               fg="#FFFFFF", font=('times', 30, 'bold'))
+        self.tru = gu.tk.Label(gu.frame_Body, textvariable=self.znach, width=25, height=1, bg="#66B2FF",
+                               fg="#FFFFFF", font=('times', 20, 'bold'))
         self.tru.pack(pady=2)
 
     def skrut_true(self):
         self.tru.pack_forget()
+
     def button_ud(self):
         slovo = self.dob_sl.get()
         znach = self.dob_zn.get()
@@ -70,6 +67,7 @@ class Carten:
 
         with open('Kart.json', 'w', encoding='utf-8') as file:
             json.dump(data, file, indent=2, ensure_ascii=False)
+
     def button_dob(self):
         new_slovo = self.dob_sl.get()
         new_znach = self.dob_zn.get()
@@ -91,4 +89,3 @@ class Carten:
             znach = vvod.get('znach')
             self.cartu.set(sllov)
             self.znach.set(znach)
-
