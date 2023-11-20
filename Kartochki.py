@@ -10,6 +10,7 @@ def display_title():
 
 class Carten:
     def __init__(self):
+        self.tru = None
         display_title()
         self.cartu = gu.tk.StringVar()
         self.znach = gu.tk.StringVar()
@@ -25,9 +26,11 @@ class Carten:
                     fg="#FFFFFF", font=('times', 50, 'bold')).pack(side='top', pady=15)
 
         gu.tk.Button(gu.frame_Body, text="Показывать значение", width=20, height=1, fg="#66B2FF", bg="#FFFFFF",
-                     font=('times', 18, 'bold'), command=self.display_true).pack(side='left',anchor='sw', padx=5, pady=4)
+                     font=('times', 18, 'bold'), command=self.display_true).pack(side='left', anchor='sw', 
+                                                                                 padx=5, pady=4)
         gu.tk.Button(gu.frame_Body, text="Cкрыть значение", width=20, height=1, fg="#66B2FF", bg="#FFFFFF",
-                     font=('times', 18, 'bold'), command=self.skrut_true).pack(side='right', anchor='se', padx=5, pady=4)
+                     font=('times', 18, 'bold'), command=self.skrut_true).pack(side='right', anchor='se', padx=5, 
+                                                                               pady=4)
 
         self.button_u = gu.tk.Button(gu.frame_Button, text="Udalit", width=20, height=2, activebackground="#FFFFFF",
                                      activeforeground="#66B2FF", bg="#66B2FF", fg="#FFFFFF",

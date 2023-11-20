@@ -22,13 +22,13 @@ frame_Footer.pack_propagate(False)
 frame_Button.pack(side='bottom', fill='x')
 frame_Footer.pack(side='bottom', fill='x')
 
-tk.Label(frame_Head, text=' D  O  C  T  O  R  ,  m e i n e   e r s t e   A p p... ', bg="#66B2FF", fg="#FFFFFF",
+tk.Label(frame_Head, text=' D  o  c  t  o  r  ,  m e i n e   e r s t e   A p p... ', bg="#66B2FF", fg="#FFFFFF",
          width=50, font=('times', 20, 'bold')).pack(pady=10)
 tk.Label(frame_Body,
          text='Приветствую и добро пожаловать!\n Для продолжения выберите одну из \nкатегории представленных ниже или '
               'в пунктах меню\n\n . . . \n---------------------------------\n---------------------------',
          font=('times', 20, 'bold')).pack(pady=50)
-tk.Button(frame_Button, text='Экономка', activebackground='#938FA6', activeforeground='#5F837F', fg='#938FA6',
+tk.Button(frame_Button, text='Экономка', activebackground='#938FA6', activeforeground='#5F837F', fg='#B7BCD0',
           bg='#5F837F', width=11, font=('times', 20, 'bold'), command=lambda: ka.ekonomka()).grid(row=0, column=0,
                                                                                                   padx=7)
 tk.Button(frame_Button, text='Карточки', activebackground='#FFFFFF', activeforeground='#66B2FF', width=11, bg='#66B2FF',

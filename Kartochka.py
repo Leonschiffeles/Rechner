@@ -4,6 +4,7 @@ import Woprosu as wp
 import Ekonomka as ek
 import Quele as qu
 
+
 def clear_Head():
     for widget in gu.frame_Head.winfo_children():
         widget.destroy()
@@ -45,7 +46,7 @@ def ekonomka():
     clear_Body()
     clear_Button()
     clear_Footer()
-    ek.ekonomka()
+    ek.Ekonomka()
 
 
 def qule():
@@ -53,4 +54,4 @@ def qule():
     clear_Body()
     clear_Button()
     clear_Footer()
-    qu.qule()
+    qu.Qule()
