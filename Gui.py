@@ -18,8 +18,9 @@ frame_Head.pack_propagate(False)
 frame_Head.pack(side='top', fill='x')
 frame_Body.pack_propagate(False)
 frame_Body.pack(fill='x')
-frame_Footer.pack_propagate(False)
+frame_Button.pack_propagate(False)
 frame_Button.pack(side='bottom', fill='x')
+frame_Footer.pack_propagate(False)
 frame_Footer.pack(side='bottom', fill='x')
 
 tk.Label(frame_Head, text=' D  o  c  t  o  r  ,  m e i n e   e r s t e   A p p... ', bg="#66B2FF", fg="#FFFFFF",

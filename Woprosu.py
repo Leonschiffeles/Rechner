@@ -36,8 +36,8 @@ class Wiktorin:
         w_spisok = []
         while len(w_spisok) < 4:
             radio_btn = gu.tk.Radiobutton(gu.frame_Body, text=" ", variable=self.opt_selected, bg='#EDD154', fg='black',
-                                          activebackground='#000000', activeforeground='#EDD154', width=25,
-                                          value=len(w_spisok) + 1, font=('times', 20))
+                                          activebackground='#000000', activeforeground='#EDD154', width=30,
+                                          value=len(w_spisok) + 1, font=('times', 16))
             w_spisok.append(radio_btn)
             radio_btn.pack(side='bottom', padx='20', pady='1')
         return w_spisok
@@ -51,7 +51,8 @@ class Wiktorin:
 
     def buttons(self):
         gu.tk.Button(gu.frame_Button, text="Далее", activebackground='#000000', activeforeground='#EDD154', width=20,
-                     height=2, bg='#EDD154', fg='#000000', font=('times', 20, 'bold'), command=self.next_btn,).pack()
+                     height=2, bg='#EDD154', fg='#000000', font=('times', 20, 'bold'), command=self.next_btn, ).pack(
+            pady=3)
 
     def check_ans(self, w_no):
         if self.opt_selected.get() == answer[w_no]:

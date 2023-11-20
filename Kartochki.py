@@ -26,27 +26,21 @@ class Carten:
                     fg="#FFFFFF", font=('times', 50, 'bold')).pack(side='top', pady=15)
 
         gu.tk.Button(gu.frame_Body, text="Показывать значение", width=20, height=1, fg="#66B2FF", bg="#FFFFFF",
-                     font=('times', 18, 'bold'), command=self.display_true).pack(side='left', anchor='sw', 
+                     font=('times', 18, 'bold'), command=self.display_true).pack(side='left', anchor='sw',
                                                                                  padx=5, pady=4)
         gu.tk.Button(gu.frame_Body, text="Cкрыть значение", width=20, height=1, fg="#66B2FF", bg="#FFFFFF",
-                     font=('times', 18, 'bold'), command=self.skrut_true).pack(side='right', anchor='se', padx=5, 
+                     font=('times', 18, 'bold'), command=self.skrut_true).pack(side='right', anchor='se', padx=5,
                                                                                pady=4)
 
-        self.button_u = gu.tk.Button(gu.frame_Button, text="Udalit", width=20, height=2, activebackground="#FFFFFF",
-                                     activeforeground="#66B2FF", bg="#66B2FF", fg="#FFFFFF",
-                                     font=('times', 15, 'bold'))
-        self.button_u["command"] = self.button_ud
-        self.button_u.grid(row=0, column=0, padx=8, pady=3)
-        self.button_d = gu.tk.Button(gu.frame_Button, text="Dalee", width=20, height=2, activebackground="#FFFFFF",
-                                     activeforeground="#66B2FF", bg="#66B2FF", fg="#FFFFFF",
-                                     font=('times', 15, 'bold'))
-        self.button_d["command"] = self.display_cartu
-        self.button_d.grid(row=0, column=1, padx=8, pady=3)
-        self.button_do = gu.tk.Button(gu.frame_Button, text="Dobavit", width=20, height=2, activebackground="#FFFFFF",
-                                      activeforeground="#66B2FF", bg="#66B2FF", fg="#FFFFFF",
-                                      font=('times', 15, 'bold'))
-        self.button_do["command"] = self.button_dob
-        self.button_do.grid(row=0, column=2, padx=8, pady=3)
+        gu.tk.Button(gu.frame_Button, text="Udalit", width=20, height=2, activebackground="#FFFFFF",
+                     activeforeground="#66B2FF", bg="#66B2FF", fg="#FFFFFF",
+                     font=('times', 15, 'bold'), command=self.button_ud).grid(row=0, column=0, padx=8, pady=3)
+        gu.tk.Button(gu.frame_Button, text="Dalee", width=20, height=2, activebackground="#FFFFFF",
+                     activeforeground="#66B2FF", bg="#66B2FF", fg="#FFFFFF",
+                     font=('times', 15, 'bold'), command=self.display_cartu).grid(row=0, column=1, padx=8, pady=3)
+        gu.tk.Button(gu.frame_Button, text="Dobavit", width=20, height=2, activebackground="#FFFFFF",
+                     activeforeground="#66B2FF", bg="#66B2FF", fg="#FFFFFF",
+                     font=('times', 15, 'bold'), command=self.button_dob).grid(row=0, column=2, padx=8, pady=3)
 
     def display_true(self):
         self.tru = gu.tk.Label(gu.frame_Body, textvariable=self.znach, width=25, height=1, bg="#66B2FF",

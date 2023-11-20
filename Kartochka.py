@@ -54,4 +54,4 @@ def qule():
     clear_Body()
     clear_Button()
     clear_Footer()
-    qu.Qule()
+    qu.Quele()

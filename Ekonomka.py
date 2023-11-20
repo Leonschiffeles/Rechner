@@ -17,7 +17,7 @@ class Ekonomka:
         self.eda = gu.tk.IntVar()
         self.vsego = gu.tk.IntVar()
         self.display_dob()
-        self. vsegototal()
+        self.vsegototal()
 
         self.dob_obyaz = gu.tk.Entry(gu.frame_Body, width=15, bg="#FFFFFF", fg="#5F837F", justify="center",
                                      font=('times', 20, 'bold'))
@@ -52,25 +52,19 @@ class Ekonomka:
         self.l_eda = gu.tk.Label(gu.frame_Body, textvariable=self.eda, width=35, fg='#B7BCD0', bg='#5F837F',
                                  font=('times', 20, 'bold')).grid(row=3, column=1, padx=6, pady=15)
 
+        gu.tk.Button(gu.frame_Button, text="Добавить в список", width=20, height=2, activebackground='#B7BCD0',
+                     activeforeground='#5F837F', fg='#B7BCD0',
+                     bg='#5F837F', font=('times', 15, 'bold'), command=self.dob_dob).grid(row=0, column=0, padx=11,
+                                                                                          pady=2)
+        gu.tk.Button(gu.frame_Button, text="Обновление спискa", width=20, height=2,activebackground='#B7BCD0',
+                     activeforeground='#5F837F', fg='#B7BCD0',
+                     bg='#5F837F', font=('times', 15, 'bold'), command=self.obnov_str).grid(row=0, column=1, padx=6,
+                                                                                            pady=2)
 
-
-        self.dob_do = gu.tk.Button(gu.frame_Button, text="Добавить в список", width=20, height=2, activebackground='#B7BCD0',
-                                   activeforeground='#5F837F', fg='#B7BCD0',
-                                   bg='#5F837F', font=('times', 15, 'bold'))
-        self.dob_do["command"] = self.dob_dob
-        self.dob_do.grid(row=0, column=0, padx=11, pady=2)
-        self.obnov = gu.tk.Button(gu.frame_Button, text="Обновление спискa", width=20, height=2,
-                                         activebackground='#B7BCD0',
-                                         activeforeground='#5F837F', fg='#B7BCD0',
-                                         bg='#5F837F', font=('times', 15, 'bold'))
-        self.obnov["command"] = self.obnov_str
-        self.obnov.grid(row=0, column=1, padx=6, pady=2)
-
-        self.ochist_do = gu.tk.Button(gu.frame_Button, text="Очистить список", width=20, height=2, activebackground='#B7BCD0',
-                                         activeforeground='#5F837F', fg='#B7BCD0',
-                                         bg='#5F837F', font=('times', 15, 'bold'))
-        self.ochist_do["command"] = self.udalit_dob
-        self.ochist_do.grid(row=0, column=2, padx=6, pady=2)
+        gu.tk.Button(gu.frame_Button, text="Очистить список", width=20, height=2, activebackground='#B7BCD0',
+                     activeforeground='#5F837F', fg='#B7BCD0',
+                     bg='#5F837F', font=('times', 15, 'bold'), command=self.udalit_dob).grid(row=0, column=2, padx=6,
+                                                                                             pady=2)
 
     def dob_dob(self):
         new_obyaz = int(self.dob_obyaz.get())
