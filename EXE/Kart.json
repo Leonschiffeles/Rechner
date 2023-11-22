@@ -1,0 +1,44 @@
+{
+  "Carts": [
+    {
+      "slovo": "heißen",
+      "znach": "называться"
+    },
+    {
+      "slovo": "sagen",
+      "znach": "говорить"
+    },
+    {
+      "slovo": "kennen",
+      "znach": "знать"
+    },
+    {
+      "slovo": "geben",
+      "znach": "давать"
+    },
+    {
+      "slovo": "stellen",
+      "znach": "ставить"
+    },
+    {
+      "slovo": "legen",
+      "znach": "класть"
+    },
+    {
+      "slovo": "stehen",
+      "znach": "стоять"
+    },
+    {
+      "slovo": "erkennen",
+      "znach": "узнавать"
+    },
+    {
+      "slovo": "müssen",
+      "znach": "быть"
+    },
+    {
+      "slovo": "lesen",
+      "znach": "читать"
+    }
+  ]
+}
