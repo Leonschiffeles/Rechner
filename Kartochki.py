@@ -32,13 +32,13 @@ class Carten:
                      font=('times', 18, 'bold'), command=self.skrut_true).pack(side='right', anchor='se', padx=5,
                                                                                pady=4)
 
-        gu.tk.Button(gu.frame_Button, text="Udalit", width=20, height=2, activebackground="#FFFFFF",
+        gu.tk.Button(gu.frame_Button, text="Удалить", width=20, height=2, activebackground="#FFFFFF",
                      activeforeground="#66B2FF", bg="#66B2FF", fg="#FFFFFF",
                      font=('times', 15, 'bold'), command=self.button_ud).grid(row=0, column=0, padx=8, pady=3)
-        gu.tk.Button(gu.frame_Button, text="Dalee", width=20, height=2, activebackground="#FFFFFF",
+        gu.tk.Button(gu.frame_Button, text="Далее", width=20, height=2, activebackground="#FFFFFF",
                      activeforeground="#66B2FF", bg="#66B2FF", fg="#FFFFFF",
                      font=('times', 15, 'bold'), command=self.display_cartu).grid(row=0, column=1, padx=8, pady=3)
-        gu.tk.Button(gu.frame_Button, text="Dobavit", width=20, height=2, activebackground="#FFFFFF",
+        gu.tk.Button(gu.frame_Button, text="Добавить", width=20, height=2, activebackground="#FFFFFF",
                      activeforeground="#66B2FF", bg="#66B2FF", fg="#FFFFFF",
                      font=('times', 15, 'bold'), command=self.button_dob).grid(row=0, column=2, padx=8, pady=3)
 

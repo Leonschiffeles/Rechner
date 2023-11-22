@@ -1,5 +1,5 @@
 import tkinter as tk
-import Kartochka as ka
+import main as ka
 
 Okno = tk.Tk()
 Okno.config(bg='#DADADA')
