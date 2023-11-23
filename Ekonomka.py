@@ -55,15 +55,16 @@ class Ekonomka:
         gu.tk.Button(gu.frame_Button, text="Добавить в список", width=20, height=2, activebackground='#B7BCD0',
                      activeforeground='#5F837F', fg='#B7BCD0',
                      bg='#5F837F', font=('times', 15, 'bold'), command=self.obnov_str).grid(row=0, column=0, padx=11,
-                                                                                          pady=2)
-        gu.tk.Button(gu.frame_Button, text="------\n-----------\n------", width=20, height=2,activebackground='#B7BCD0',
+                                                                                            pady=2)
+        gu.tk.Button(gu.frame_Button, text="------\n-----------\n------", width=20, height=2,
+                     activebackground='#B7BCD0',
                      activeforeground='#5F837F', fg='#B7BCD0',
                      bg='#5F837F', font=('times', 15, 'bold')).grid(row=0, column=1, padx=6,
-                                                                                            pady=2)
+                                                                    pady=2)
 
         gu.tk.Button(gu.frame_Button, text="Очистить список", width=20, height=2, activebackground='#B7BCD0',
                      activeforeground='#5F837F', fg='#B7BCD0',
-                     bg='#5F837F', font=('times', 15, 'bold'), command= self.obnov_stru).grid(row=0, column=2, padx=6,
+                     bg='#5F837F', font=('times', 15, 'bold'), command=self.obnov_stru).grid(row=0, column=2, padx=6,
                                                                                              pady=2)
 
     def dob_dob(self):
@@ -133,6 +134,7 @@ class Ekonomka:
     def obnov_str(self):
         self.dob_dob()
         ka.ekonomka()
+
     def obnov_stru(self):
         self.udalit_dob()
         ka.ekonomka()

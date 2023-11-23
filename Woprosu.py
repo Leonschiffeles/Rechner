@@ -16,7 +16,7 @@ def display_title():
 
 class Wiktorin:
     def __init__(self):
-        self.w_no = 0
+        self.quest_number = 0
         self.label = gu.tk.Label(gu.frame_Body, text="", width=50, bg='#EDD154', fg='#000000',
                                  font=('times', 22, 'bold'))
         display_title()
@@ -30,22 +30,22 @@ class Wiktorin:
 
     def display_question(self):
         self.label.pack(pady='40', padx='20')
-        self.label.config(text=question[self.w_no])
+        self.label.config(text=question[self.quest_number])
 
     def radio_buttons(self):
-        w_spisok = []
-        while len(w_spisok) < 4:
+        ques_list = []
+        while len(ques_list) < 4:
             radio_btn = gu.tk.Radiobutton(gu.frame_Body, text=" ", variable=self.opt_selected, bg='#EDD154', fg='black',
                                           activebackground='#000000', activeforeground='#EDD154', width=30,
-                                          value=len(w_spisok) + 1, font=('times', 16))
-            w_spisok.append(radio_btn)
+                                          value=len(ques_list) + 1, font=('times', 16))
+            ques_list.append(radio_btn)
             radio_btn.pack(side='bottom', padx='20', pady='1')
-        return w_spisok
+        return ques_list
 
     def display_options(self):
         val = 0
         self.opt_selected.set(0)
-        for option in options[self.w_no]:
+        for option in options[self.quest_number]:
             self.opts[val]['text'] = option
             val += 1
 
@@ -60,20 +60,20 @@ class Wiktorin:
 
     def next_btn(self):
 
-        if self.check_ans(self.w_no):
+        if self.check_ans(self.quest_number):
             self.ball += 1
-        self.w_no += 1
+        self.quest_number += 1
 
-        if self.w_no == self.data_size:
+        if self.quest_number == self.data_size:
             self.display_result()
         else:
             self.display_question()
             self.display_options()
 
     def display_result(self):
-        oschibki = self.data_size - self.ball
-        verno = f"Правильных ответов: {self.ball}"
-        neverno = f"Неправильных ответов: {oschibki}"
-        itogo = int(self.ball / self.data_size * 100)
-        resultat = f"В итоге: {itogo}%"
-        mb.showinfo("", f"{resultat}\n{verno}\n{neverno}")
+        errors = self.data_size - self.ball
+        correct = f"Правильных ответов: {self.ball}"
+        wrong = f"Неправильных ответов: {errors}"
+        total = int(self.ball / self.data_size * 100)
+        result = f"В итоге: {total}%"
+        mb.showinfo("", f"{result}\n{correct}\n{wrong}")
