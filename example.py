@@ -2,7 +2,7 @@ import math
 
 
 def circle_area():
-    rad = float(input("Input the Radius==>"))
+    rad = float(input("Укажите радиус ==>"))
     s_circle = 3.14 * rad ** 2
     print(f"Площадь круга с радиусом >{rad}< составляет >{s_circle}<")
 
